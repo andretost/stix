@@ -1,0 +1,165 @@
+{
+    "type": "bundle",
+    "id": "bundle--a2f6c8b9-c01b-4e6b-98f1-a23705698b1a",
+    "objects": [
+        {
+            "type": "identity",
+            "id": "identity--f431f809-377b-45e0-aa1c-6a4751cae5ff",
+            "name": "aws_athena",
+            "identity_class": "events"
+        },
+        {
+            "id": "observed-data--a899c9ac-990d-45d8-96de-48d7a8afad03",
+            "type": "observed-data",
+            "created_by_ref": "identity--f431f809-377b-45e0-aa1c-6a4751cae5ff",
+            "created": "2023-04-17T20:05:42.120Z",
+            "modified": "2023-04-17T20:05:42.120Z",
+            "objects": {
+                "0": {
+                    "type": "x-aws-details",
+                    "account_id": 246952202283,
+                    "region": "us-east-1"
+                },
+                "1": {
+                    "type": "x-ibm-finding",
+                    "finding_type": "UnauthorizedAccess:EC2/SSHBruteForce",
+                    "src_ip_ref": "3",
+                    "start": "2022-12-22T14:11:11.000Z",
+                    "dst_ip_ref": "10",
+                    "dst_geolocation": "C\u00f4te d\u2019Ivoire",
+                    "end": "2023-04-13T21:06:02.000Z",
+                    "severity": 2,
+                    "name": "160.155.57.46 is performing SSH brute force attacks against i-0bc91f02063a5c3ce.",
+                    "description": "160.155.57.46 is performing SSH brute force attacks against i-0bc91f02063a5c3ce. Brute force attacks are used to gain unauthorized access to your instance by guessing the SSH password."
+                },
+                "2": {
+                    "type": "domain-name",
+                    "value": "ip-172-31-9-150.ec2.internal",
+                    "resolves_to_refs": [
+                        "3"
+                    ]
+                },
+                "3": {
+                    "type": "ipv4-addr",
+                    "value": "172.31.9.150",
+                    "x_aws_interface_id": "eni-067e655a7161f6735"
+                },
+                "4": {
+                    "type": "network-traffic",
+                    "src_ref": "3",
+                    "protocols": [
+                        "tcp"
+                    ],
+                    "dst_port": 32824,
+                    "dst_ref": "10",
+                    "src_port": 22
+                },
+                "5": {
+                    "type": "x-aws-vpc",
+                    "subnet_id": "subnet-a17cc8c7",
+                    "vpc_id": "vpc-58f93925",
+                    "security_group_id": "sg-0905b44a8d044a500",
+                    "security_group_name": "launch-wizard-15"
+                },
+                "6": {
+                    "type": "domain-name",
+                    "value": "ec2-44-195-79-2.compute-1.amazonaws.com",
+                    "resolves_to_refs": [
+                        "7"
+                    ]
+                },
+                "7": {
+                    "type": "ipv4-addr",
+                    "value": "44.195.79.2",
+                    "x_aws_interface_id": "eni-067e655a7161f6735"
+                },
+                "8": {
+                    "type": "x-aws-instance",
+                    "image_id": "ami-08c40ec9ead489470",
+                    "instance_id": "i-0bc91f02063a5c3ce",
+                    "availability_zone": "us-east-1b"
+                },
+                "9": {
+                    "type": "x-aws-athena",
+                    "service_action_networkconnectionaction_remoteipdetails_country_countryname": "C\u00f4te d\u2019Ivoire",
+                    "arn": "arn:aws:guardduty:us-east-1:246952202283:detector/e2c22c3ea898a5ba4cd2aa0c8608471d/finding/0cc29d1c9602ab8c151967f05bda287f",
+                    "createdat": "2022-12-22T14:25:03.493Z",
+                    "finding_id": "0cc29d1c9602ab8c151967f05bda287f",
+                    "partition": "aws",
+                    "resource": {
+                        "instancedetails": {
+                            "imagedescription": "Canonical, Ubuntu, 22.04 LTS, amd64 jammy image build on 2022-09-12",
+                            "instancestate": "running",
+                            "instancetype": "t2.medium",
+                            "launchtime": "2022-11-24T02:12:43.000Z",
+                            "tags": {
+                                "0": {
+                                    "key": "Name",
+                                    "value": "cpd-client"
+                                }
+                            }
+                        },
+                        "resourcetype": "Instance"
+                    },
+                    "schemaversion": 2.0,
+                    "service": {
+                        "action": {
+                            "actiontype": "NETWORK_CONNECTION",
+                            "networkconnectionaction": {
+                                "connectiondirection": "INBOUND",
+                                "localportdetails": {
+                                    "portname": "SSH"
+                                },
+                                "remoteipdetails": {
+                                    "geolocation": {
+                                        "lat": "5.3544",
+                                        "lon": "-4.0017"
+                                    },
+                                    "organization": {
+                                        "asn": "29571",
+                                        "asnorg": "ORANGE-COTE-IVOIRE",
+                                        "isp": "Orange Cote d'Ivoire",
+                                        "org": "Orange Cote d'Ivoire"
+                                    }
+                                }
+                            }
+                        },
+                        "additionalinfo": {
+                            "type": "default",
+                            "value": "{}"
+                        },
+                        "count": "10",
+                        "detectorid": "e2c22c3ea898a5ba4cd2aa0c8608471d",
+                        "resourcerole": "TARGET",
+                        "servicename": "guardduty"
+                    },
+                    "updatedat": "2023-04-13T21:09:15.744Z"
+                },
+                "10": {
+                    "type": "ipv4-addr",
+                    "value": "160.155.57.46",
+                    "x_aws_remote_city_name": "Abidjan",
+                    "x_aws_remote_country_name": "C\u00f4te d\u2019Ivoire"
+                }
+            },
+            "ipv4-addr": {
+                "x_aws_ip_type": "eni-067e655a7161f6735"
+            },
+            "first_observed": "2022-12-22T14:11:11.000Z",
+            "last_observed": "2023-04-13T21:06:02.000Z",
+            "number_observed": 1
+        }
+    ],
+    "spec_version": "2.0",
+    "stats": [
+        {
+            "action": "transmission",
+            "time": 1681761942050
+        },
+        {
+            "action": "translation",
+            "time": 1681761942121
+        }
+    ],
+    "metadata": "COMPLETE:::[{\"VarCharValue\": \"schemaversion\"}, {\"VarCharValue\": \"accountid\"}, {\"VarCharValue\": \"region\"}, {\"VarCharValue\": \"partition\"}, {\"VarCharValue\": \"id\"}, {\"VarCharValue\": \"arn\"}, {\"VarCharValue\": \"type\"}, {\"VarCharValue\": \"resource\"}, {\"VarCharValue\": \"service\"}, {\"VarCharValue\": \"severity\"}, {\"VarCharValue\": \"createdat\"}, {\"VarCharValue\": \"updatedat\"}, {\"VarCharValue\": \"title\"}, {\"VarCharValue\": \"description\"}]"
+}
