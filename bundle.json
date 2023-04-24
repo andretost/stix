@@ -91,7 +91,7 @@
             },
             "first_observed": "2022-04-23T00:03:11.000Z",
             "last_observed": "2023-04-23T01:57:02.000Z",
-            "number_observed": 29
+            "number_observed": 1
         },
         {
             "id": "observed-data--cc5f37b9-b7bc-45b4-a3a0-99e2540a039b",
@@ -176,7 +176,7 @@
             },
             "first_observed": "2022-12-22T14:11:11.000Z",
             "last_observed": "2023-04-13T21:06:02.000Z",
-            "number_observed": 10
+            "number_observed": 1
         },
         {
             "id": "observed-data--45f614a2-09d3-4a6b-8b94-9de94a94d380",
